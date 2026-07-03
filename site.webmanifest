@@ -1,0 +1,32 @@
+{
+  "name": "Ocean City PAT Testing",
+  "short_name": "Ocean City PAT",
+  "description": "Portable appliance testing, EICR and fire safety testing across Plymouth, Devon and South East Cornwall.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "theme_color": "#206F8B",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
