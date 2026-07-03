@@ -307,6 +307,42 @@ for u in sorted(sitemap_urls):
     if resolve(p if p else "/") is None:
         problems[sm_path].append(("FAIL", "sitemap-orphan", f"sitemap lists non-existent page: {u}"))
 
+# ---- per-page pass matrix (--table) -----------------------------------------
+if "--table" in sys.argv:
+    COLS = [
+        ("Title",   {"title", "dup-title"}),
+        ("Meta",    {"meta-desc", "dup-meta-desc"}),
+        ("H1",      {"h1", "h1-first", "dup-h1"}),
+        ("Canon",   {"canonical"}),
+        ("Imgs",    {"img-alt", "dup-img", "img-count", "og-image"}),
+        ("Links",   {"broken-link", "clean-url", "internal-links", "anchor-text"}),
+        ("Phone",   {"contact"}),
+        ("FAQ",     {"faq"}),
+        ("Schema",  {"schema"}),
+        ("Manifest",{"manifest"}),
+        ("Words",   {"word-count"}),
+        ("Sitemap", {"sitemap"}),
+    ]
+    def cell(path, ruleset):
+        lv = {lvl for lvl, rule, _ in problems.get(path, []) if rule in ruleset}
+        return "FAIL" if "FAIL" in lv else ("warn" if "WARN" in lv else "PASS")
+    header = "| Page | " + " | ".join(c for c, _ in COLS) + " | Overall |"
+    sep = "|" + "---|" * (len(COLS) + 2)
+    print(header); print(sep)
+    npass = 0
+    for path in indexable:
+        cells = [cell(path, rs) for _, rs in COLS]
+        overall = "❌ FAIL" if "FAIL" in cells else "✅ PASS"
+        if "FAIL" not in cells:
+            npass += 1
+        sym = {"PASS": "✅", "warn": "⚠️", "FAIL": "❌"}
+        row = url_for(path)
+        print(f"| `{row}` | " + " | ".join(sym[c] for c in cells) + f" | {overall} |")
+    print(f"\n**{npass}/{len(indexable)} indexable pages PASS** "
+          f"(✅ pass · ⚠️ non-blocking warning · ❌ fail). "
+          f"Exempt checks show ✅. Run: `python3 tools/audit.py --table`")
+    sys.exit(0)
+
 # ---- report -----------------------------------------------------------------
 n_fail = n_warn = 0
 clean = []
