@@ -3,8 +3,9 @@ Options -MultiViews -Indexes
 DirectorySlash Off
 RewriteEngine On
 
-# Force HTTPS (20i issues the certificate; keep one canonical scheme)
-RewriteCond %{HTTPS} off
+# Force HTTPS. 20i terminates TLS at its edge, so the origin always sees
+# %{HTTPS}=off — test the forwarded proto instead, or this loops forever.
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Canonical host: send apex -> www to match CNAME / og:url
