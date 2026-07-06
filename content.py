@@ -692,12 +692,15 @@ def build_pages(g):
       <p>We aim to reply to every enquiry the same day. For anything urgent, calling is always fastest.</p>
     </div>
     <aside class="side">
-      <div class="side-card">
+      <div class="side-card" id="request-a-quote">
         <h3>Request a quote</h3>
-        <form class="quote-form" action="https://formspree.io/f/your-form-id" method="POST">
-          <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-          <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
-          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <div class="form-alert" id="form-alert" role="status" hidden></div>
+        <form class="quote-form" id="quote-form" action="/contact-handler.php" method="POST">
+          <div class="hp-wrap" aria-hidden="true"><label>Company website (leave this field blank)<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label></div>
+          <input type="hidden" name="elapsed_ms" value="">
+          <label>Your name<input type="text" name="name" required autocomplete="name" maxlength="100"></label>
+          <label>Phone<input type="tel" name="phone" required autocomplete="tel" maxlength="40"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" maxlength="150"></label>
           <label>Property type
             <select name="property_type">
               <option>Rental property</option>
@@ -726,12 +729,26 @@ def build_pages(g):
   <p>Some jobs are easier to explain in a quick conversation, and that's absolutely fine. If your property is unusual, you're juggling several at once, or you simply want a straight answer without filling in a form, just call or message <a href="tel:{TEL}">{PH}</a>. You'll get through to the person who actually does the testing, not a call centre, and there's never any pressure or hard sell. We'll happily talk you through what you need, what it costs and when we can fit you in — and if it turns out you don't need a test yet, we'll tell you that too.</p>
 </div></section>
 """
+    # Plain (non-f) string so the JS braces need no escaping. Stamps how long the
+    # form was on screen (spam time-trap) and surfaces the success/error banner
+    # after the PHP handler redirects back with ?sent=1 / ?error=1.
+    contact_script = """<script>
+(function(){
+  var f=document.getElementById('quote-form');
+  if(f){var t=Date.now();f.addEventListener('submit',function(){var e=f.elements['elapsed_ms'];if(e){e.value=String(Date.now()-t);}});}
+  var a=document.getElementById('form-alert');if(!a){return;}
+  var q=location.search||'';
+  if(q.indexOf('sent=1')>-1){a.className='form-alert ok';a.textContent='Thanks \\u2014 your enquiry is on its way. We aim to reply the same day.';a.hidden=false;}
+  else if(q.indexOf('error=1')>-1){a.className='form-alert err';a.textContent='Sorry, we couldn\\u2019t send that. Please call 07783 543958 or email sales@oceancitypattesting.co.uk.';a.hidden=false;}
+})();
+</script>"""
     pages.append({
         "url": "/contact", "active": "contact", "priority": 0.85, "no_cta": True,
         "title": "Contact & Free Quote | Ocean City PAT Testing Plymouth",
         "desc": f"Get a free, fixed-price PAT testing quote the same day. Call {PH} or message Ocean City PAT Testing — covering Plymouth, Devon and South East Cornwall.",
         "breadcrumbs": [("Home", "/"), ("Contact", "/contact")],
         "body": contact_body,
+        "scripts": contact_script,
         "faqs": [
             ("How do I get a quote?", f"Call or text {PH}, email {EMAIL}, or fill in the form on this page with a few details about your property. We reply the same day with a fixed price."),
             ("How quickly will you reply?", "We aim to respond to every enquiry the same day. For anything urgent, calling is always the fastest way to reach us."),

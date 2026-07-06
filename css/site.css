@@ -814,6 +814,12 @@ section .split > .prose{min-width:0}
   padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:#fff;color:var(--ink)}
 .quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:var(--green)}
 .quote-form .btn{margin-top:.4rem}
+/* honeypot — off-screen for humans, tempting to naive spam bots */
+.hp-wrap{position:absolute!important;left:-9999px!important;top:auto;width:1px;height:1px;overflow:hidden}
+/* contact form status banner (shown by JS after the handler redirects back) */
+.form-alert{margin:0 0 .85rem;padding:.7rem .9rem;border-radius:8px;font-size:.9rem;font-weight:600;line-height:1.45}
+.form-alert.ok{background:#e7f6ee;color:#0d6b3f;border:1px solid #bfe6cf}
+.form-alert.err{background:#fdecec;color:#a12626;border:1px solid #f2c5c5}
 .form-note{font-size:.78rem;color:var(--muted);margin:.4rem 0 0;font-weight:400}
 
 /* svc cta card (8th card completing the grid) */

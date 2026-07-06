@@ -19,7 +19,7 @@ SITE = {
     "domain": "https://www.oceancitypattesting.co.uk",
     "phone_display": "07783 543958",
     "phone_e164": "+447783543958",
-    "email": "oceancitypattesting@gmail.com",
+    "email": "sales@oceancitypattesting.co.uk",
     "area": "Plymouth, Devon &amp; South East Cornwall",
     "region": "Devon",
     "locality": "Plymouth",
@@ -385,7 +385,7 @@ def render(page):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{css_href}">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io mailto:">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   {schema_blocks}
 </head>
