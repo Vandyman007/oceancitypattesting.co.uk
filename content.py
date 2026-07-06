@@ -169,7 +169,7 @@ def build_pages(g):
     # SERVICES HUB
     # ===================================================================
     services_body = f"""
-{page_banner('PAT Testing &amp; Electrical Safety Services', 'Portable appliance testing, EICR electrical reports and fire safety checks across Plymouth, Devon and South East Cornwall — all carried out by one qualified, fully insured local engineer.')}
+{page_banner('PAT Testing Services', 'Portable appliance testing for landlords, holiday lets, businesses and community groups across Plymouth, Devon and South East Cornwall — all carried out by one qualified, fully insured local engineer.')}
 {crumbs([('Home', '/'), ('Services', '/services')])}
 <section><div class="wrap prose">
   <p>Ocean City PAT Testing offers a complete electrical safety service for homes, rental properties and businesses across {AREA}. Whether you're a landlord meeting your duty of care, a holiday-let owner protecting your guests, a business keeping its workplace compliant or a community group looking after volunteers, we have a service — and a price — to suit. Everything below is delivered by a City &amp; Guilds qualified engineer with over {YRS} years' hands-on electrical experience, and every job ends with a same-day certificate.</p>
@@ -179,13 +179,13 @@ def build_pages(g):
 </div></section>
 <section class="section-cream"><div class="wrap prose">
   <h2>Not sure which service you need?</h2>
-  <p>Most of our customers start with <a href="/services/pat-testing">portable appliance testing</a> — the visual and electrical testing of everything that plugs into a socket. If you let property, our <a href="/services/landlord-pat-testing">landlord</a> and <a href="/services/holiday-let-pat-testing">holiday let</a> packages bundle that testing into a fixed price per property. Businesses usually want our <a href="/services/business-pat-testing">commercial testing</a>, which covers the first 50 appliances and adds an asset register. And if you need the fixed wiring checked rather than the appliances, that's an <a href="/services/eicr-electrical-testing">EICR</a>. Still unsure? Call {PH} and we'll point you the right way — advice is always free.</p>
+  <p>Most of our customers start with <a href="/services/pat-testing">portable appliance testing</a> — the visual and electrical testing of everything that plugs into a socket. If you let property, our <a href="/services/landlord-pat-testing">landlord</a> and <a href="/services/holiday-let-pat-testing">holiday let</a> packages bundle that testing into a fixed price per property. Businesses usually want our <a href="/services/business-pat-testing">commercial testing</a>, which covers the first 50 appliances and adds an asset register. And charities, churches and community groups get our lowest <a href="/services/charity-community-pat-testing">per-item rate</a>. Still unsure? Call {PH} and we'll point you the right way — advice is always free.</p>
 </div></section>
 """
     pages.append({
         "url": "/services", "active": "services", "priority": 0.9,
-        "title": "PAT Testing & Electrical Safety Services | Ocean City",
-        "desc": "Our PAT testing, EICR and fire safety services for landlords, holiday lets, businesses and community groups across Plymouth, Devon and South East Cornwall.",
+        "title": "PAT Testing Services | Ocean City PAT Testing",
+        "desc": "Our PAT testing services for landlords, holiday lets, businesses and community groups across Plymouth, Devon and South East Cornwall. Same-day certificates.",
         "breadcrumbs": [("Home", "/"), ("Services", "/services")],
         "body": services_body,
     })
@@ -212,6 +212,7 @@ def build_pages(g):
                 ("Will you remove items from use if they fail?", "Yes. Any item that fails is labelled red and we'll advise you to stop using it immediately. Many minor faults — a blown fuse, a damaged plug, a frayed lead end — can be repaired on the spot so the item passes."),
                 ("Do I get a certificate?", "Always. You receive a full digital certificate the same day, listing every appliance tested with its result, ready for your insurer, letting agent or an inspector."),
                 ("Can you test out of hours?", "Yes — for businesses especially, we're happy to test in the evening or at weekends so you don't lose any trade or disrupt your staff."),
+                ("Do I need to be there while you test?", "Not necessarily. As long as we can get safe access to the appliances and sockets, you don't have to stay — plenty of landlords and business owners simply give us access and get on with their day. We'll always talk you through the results and anything that failed, in person or by phone, before your certificate is emailed the same day."),
             ],
         },
         "landlord-pat-testing": {
@@ -232,6 +233,7 @@ def build_pages(g):
                 ("How often should a rental property be PAT tested?", "Most landlords test annually or every two years, often timed to coincide with a change of tenancy. We'll advise a sensible interval based on the property and its appliances."),
                 ("Do you test between tenancies?", "Yes — a void period is the ideal time to test, with no tenants to work around. We can usually fit in around your turnaround schedule at short notice."),
                 ("Can you test several of my properties at once?", "Absolutely. We look after portfolio landlords across the South West and can plan a testing round, keep your renewal dates on record and remind you when each property is due."),
+                ("Can you send the certificate straight to my letting agent?", "Yes. We can email your digital certificate directly to you, your managing agent, or both, so the paperwork lands wherever it needs to be without you forwarding anything. For portfolio landlords we keep every property's renewal date on file and remind you when each one falls due."),
             ],
         },
         "holiday-let-pat-testing": {
@@ -252,6 +254,7 @@ def build_pages(g):
                 ("How often should a holiday let be tested?", "Because of the high turnover and unsupervised use, annual PAT testing is the usual recommendation for holiday lets — we'll confirm what's right for your property."),
                 ("Can you test around our guests?", "Yes. We schedule around changeover days and work quickly so testing never clashes with a booking. For multiple properties we can plan a single efficient visit."),
                 ("Will my booking platform accept the certificate?", "Yes — our digital certificates are a recognised record of testing and are exactly what platforms and insurers ask for as proof of electrical safety."),
+                ("How many appliances does a typical holiday let have?", "Usually more than owners expect. Between the kitchen white goods, kettles and toasters, TVs, hairdryers, heaters, lamps and that drawer of spare chargers, even a modest cottage often has thirty or forty items. We test the lot for one fixed price, so there are no surprises when we add it up."),
             ],
         },
         "business-pat-testing": {
@@ -272,6 +275,7 @@ def build_pages(g):
                 ("Can you test outside our opening hours?", "Yes. Out-of-hours, early-morning and weekend testing is no problem and is often the easiest way to avoid disrupting staff and customers."),
                 ("Do we get an asset register?", "Yes — commercial jobs include a full asset register listing every appliance, its result and its next test date, alongside your digital certificate."),
                 ("How often does a business need PAT testing?", "It depends on your environment and equipment. Offices are often tested every one to two years, while higher-risk settings like kitchens and workshops are tested more frequently. We'll recommend a schedule based on a quick risk assessment."),
+                ("Will testing disrupt our staff or customers?", "We work hard to make sure it doesn't. We move methodically through the premises, unplug and re-plug each item exactly as we found it, and can test out of hours, early morning or at weekends if that suits. Most businesses barely notice we've been in beyond the fresh test labels and the certificate in their inbox."),
             ],
         },
         "charity-community-pat-testing": {
@@ -292,46 +296,7 @@ def build_pages(g):
                 ("Do we still get a proper certificate?", "Yes. Community groups receive the same full digital certificate as every other customer, listing each appliance and its result — ideal for your records and your insurer."),
                 ("Can you test our village hall around bookings?", "Of course. We'll fit testing around your hall's hire schedule and activities so it causes no disruption to the groups that use it."),
                 ("Do you test donated and second-hand equipment?", "Yes — donated and older equipment is exactly the sort of thing that benefits most from testing, and we'll flag anything that's no longer safe to use."),
-            ],
-        },
-        "eicr-electrical-testing": {
-            "h1": "EICR &amp; Fixed Wire Testing in Plymouth",
-            "sub": "Electrical Installation Condition Reports for landlords, homeowners and businesses — the five-yearly check of your fixed wiring.",
-            "lead": "An EICR — Electrical Installation Condition Report — checks the safety of the fixed wiring in a property: the consumer unit, the circuits, the sockets and the switches, rather than the appliances that plug into them. Ocean City PAT Testing arranges EICR and fixed-wire testing across Plymouth, Devon and South East Cornwall through our qualified electricians, so you can sort your wiring and your appliances with one trusted local contact.",
-            "subject": "EICR testing", "kw": "EICR Plymouth",
-            "sections": [
-                ("PAT testing vs an EICR — what's the difference?",
-                 "<p>It's a common mix-up, so here's the simple version. <strong>PAT testing</strong> covers the things that plug in — the kettle, the computer, the lamp. An <strong>EICR</strong> covers the fixed electrical installation — the wiring in the walls, the fuse board, the sockets and light fittings. Both are part of keeping a property electrically safe, and most landlords and businesses need both. The big difference is that an EICR is a <em>legal requirement</em> for rented homes in England, which must have a satisfactory report at least every five years, whereas PAT testing is the recognised way to meet the separate duty to keep appliances safe.</p>"),
-                ("What an EICR involves",
-                 "<p>A qualified electrician inspects and tests the installation, then records its condition in a formal report. Any issues are coded: <strong>C1</strong> (danger present — immediate action required), <strong>C2</strong> (potentially dangerous — remedial work needed), or <strong>C3</strong> (improvement recommended). A report is judged 'satisfactory' or 'unsatisfactory' overall, and if remedial work is needed we'll explain exactly what's required and what it will cost. For landlords, a satisfactory EICR is the document you must be able to provide to your tenants and, on request, your local authority.</p>"),
-                ("One contact for wiring and appliances",
-                 "<p>Plenty of properties need both an EICR and PAT testing — a rental, a holiday let, a shop or an office. Rather than juggle two contractors, you can sort both through Ocean City PAT Testing and keep everything on one renewal schedule. We'll test your portable appliances and arrange the fixed-wire inspection, hand you both certificates, and keep your due dates on file so nothing slips. It's the straightforward, joined-up approach that busy landlords and business owners tell us they want.</p>"),
-            ],
-            "faqs": [
-                ("Is an EICR a legal requirement?", "For rented homes in England, yes — landlords must have a satisfactory EICR at least every five years and provide a copy to tenants. For owner-occupied homes it's strongly recommended, especially when buying, selling or after major work."),
-                ("How often do I need an EICR?", "At least every five years for rentals, or at change of occupancy. Commercial premises are typically every five years too, and older installations may warrant more frequent checks."),
-                ("What's the difference between an EICR and PAT testing?", "An EICR checks the fixed wiring (consumer unit, circuits, sockets); PAT testing checks the appliances that plug into it. Most landlords and businesses need both, and we can arrange both."),
-                ("What happens if my EICR is unsatisfactory?", "We'll explain the coded issues in plain terms and quote any remedial work needed to make the installation safe and achieve a satisfactory report."),
-            ],
-        },
-        "fire-safety-testing": {
-            "h1": "Fire Safety Testing in Plymouth",
-            "sub": "Fire extinguisher, alarm and emergency lighting checks to complete your safety paperwork in one visit.",
-            "lead": "Electrical safety and fire safety go hand in hand, so we make it easy to sort both together. Alongside PAT testing, Ocean City PAT Testing can check your fire extinguishers, fire alarm and emergency lighting across Plymouth, Devon and South East Cornwall — helping landlords, holiday-let owners and businesses keep a complete, up-to-date safety file from a single trusted contact.",
-            "subject": "fire safety testing", "kw": "fire safety testing Plymouth",
-            "sections": [
-                ("Why fire safety sits alongside PAT testing",
-                 "<p>Faulty electrics are one of the leading causes of accidental fires in homes and workplaces, which is why PAT testing and fire safety belong together. The Regulatory Reform (Fire Safety) Order 2005 places a duty on the 'responsible person' for most non-domestic premises — and many shared residential ones — to manage fire risk, which includes keeping fire-fighting and fire-detection equipment in working order. Pairing your appliance testing with a check of your extinguishers, alarms and emergency lighting means one visit, one contact and one tidy set of paperwork covering both electrical and fire safety.</p>"),
-                ("What we check",
-                 "<p>Depending on your premises, we can check that fire extinguishers are present, in date, correctly sited and properly pressurised; that your fire alarm and smoke and heat detectors are working and audible; and that emergency lighting comes on and stays lit when the power is cut. We'll point out anything missing or out of date — an extinguisher past its service date, a flat emergency light, a smoke alarm that's been taken down — and advise what's needed to put it right. For holiday lets in particular, working alarms and the right extinguishers and fire blanket are essentials your insurer will expect.</p>"),
-                ("A complete safety package",
-                 "<p>For landlords and holiday-let owners especially, it makes sense to keep all your safety obligations in one place. We can combine PAT testing, an EICR and a fire safety check into a single coordinated visit, so your property is covered from the wiring to the appliances to the smoke alarms — with all the certificates you need handed over together and your renewal dates kept on file. It's the simplest way to stay on top of compliance without chasing several different contractors around the calendar. And because everything sits on one schedule, you'll get a single reminder when anything is coming up for renewal — the extinguisher service, the emergency-light test, the next EICR — rather than trying to remember half a dozen different dates spread across the year.</p>"),
-            ],
-            "faqs": [
-                ("Do you service fire extinguishers?", "We check that extinguishers are present, in date, correctly located and pressurised, and flag anything that needs a full service or replacement. We'll advise you clearly on what's required."),
-                ("Can you check my holiday let's smoke alarms?", "Yes. We'll test smoke and heat alarms and emergency lighting and confirm you have the right fire equipment in place — exactly what holiday-let insurers and guests expect."),
-                ("Can fire safety be done with my PAT testing?", "Yes — combining your PAT test, EICR and fire safety checks into one visit is the easiest way to keep a complete safety file and save on call-outs."),
-                ("Who is the 'responsible person' for fire safety?", "In most workplaces and shared premises it's the employer, owner or whoever has control of the premises. They have a duty to manage fire risk, which includes keeping fire equipment maintained."),
+                ("Do we need to be a registered charity to get the 90p rate?", "Not at all. As well as registered charities we extend the 90p-per-item rate to churches, village and community halls, clubs, pre-schools, scout and guide groups and other not-for-profit organisations. If you're a community group doing good locally, just ask and we'll sort a fair price."),
             ],
         },
     }
@@ -354,12 +319,6 @@ def build_pages(g):
         "charity-community-pat-testing": ("charity-pat-testing-advert.webp",
             "Charity PAT testing Devon at 90p per item for community groups across the South West",
             "Charity and community group PAT testing across Devon from just 90p per item."),
-        "eicr-electrical-testing": ("uk-plug-wiring-fuse.webp",
-            "EICR Plymouth electrical testing — live, neutral and earth wiring with a 13A fuse in a UK plug",
-            "A fixed-wire EICR checks the wiring and connections in your installation, like the conductors in this UK plug."),
-        "fire-safety-testing": ("electrical-compliance-stamp.webp",
-            "Compliance stamp for fire safety testing Plymouth — extinguishers, alarms and emergency lighting",
-            "Staying compliant with fire safety duty-of-care paperwork across Plymouth and the South West."),
     }
 
     for slug, label, blurb, icon, kw in SERVICES:
@@ -405,7 +364,7 @@ def build_pages(g):
   {author()}
 </div></section>
 <section class="section-cream"><div class="wrap">
-  <div class="section-head center"><span class="eyebrow">More services</span><h2>Other electrical safety services</h2></div>
+  <div class="section-head center"><span class="eyebrow">More services</span><h2>Other PAT testing services</h2></div>
   {service_cards(exclude=slug)}
 </div></section>
 """
@@ -478,7 +437,7 @@ def build_pages(g):
     # AREAS HUB
     # ===================================================================
     areas_body = f"""
-{page_banner('Areas We Cover', f'PAT testing, EICR and fire safety across Plymouth, Devon and South East Cornwall — covering {", ".join(a[1] for a in AREAS[:6])} and far beyond.')}
+{page_banner('Areas We Cover', f'PAT testing across Plymouth, Devon and South East Cornwall — covering {", ".join(a[1] for a in AREAS[:6])} and far beyond.')}
 {crumbs([('Home', '/'), ('Areas Covered', '/areas-covered')])}
 <section><div class="wrap prose">
   <p class="lead-p">Ocean City PAT Testing is based in Plymouth and covers a wide stretch of the South West — the whole of the city, out across the South Hams, and over the Tamar into South East Cornwall. Wherever you are in the region, you get the same qualified engineer, the same thorough testing and the same same-day certificate. Choose your area below for local details, or call {PH} if your town isn't listed — chances are we cover it.</p>
@@ -539,7 +498,7 @@ def build_pages(g):
                       "Smeaton's Tower on Plymouth Hoe at sunset, home base for PAT testing Plymouth services",
                       "PAT testing across Plymouth, from the Hoe and city centre to every surrounding neighbourhood.") if slug == "plymouth" else ""
         body = f"""
-{page_banner(f'PAT Testing in {nm}', f'Qualified portable appliance testing, EICR and fire safety checks for homes, holiday lets and businesses in {nm}, {county} — certified the same day.')}
+{page_banner(f'PAT Testing in {nm}', f'Qualified portable appliance testing for homes, holiday lets and businesses in {nm}, {county} — certified the same day.')}
 {crumbs([('Home', '/'), ('Areas Covered', '/areas-covered'), (nm_plain, f'/areas-covered/{slug}')])}
 <section><div class="wrap">
   <div class="split">
@@ -684,7 +643,7 @@ def build_pages(g):
             ("Is PAT testing a legal requirement?", "There's no law that names PAT testing directly, but the Electricity at Work Regulations 1989 require electrical equipment to be kept safe. PAT testing is the recognised way to prove you've met that duty, and insurers and letting agents generally expect a current certificate."),
             ("How long does a PAT certificate last?", "A certificate reflects the date of testing; how long until the next test depends on a risk assessment of your equipment and environment — commonly one to two years for offices and rentals, more often for higher-risk settings."),
             ("Can I do my own PAT testing?", "Testing must be done by a competent person with the right equipment and knowledge. For a certificate that genuinely protects you with insurers and inspectors, most people use a qualified engineer."),
-            ("What's the difference between PAT testing and an EICR?", "PAT testing checks appliances that plug in; an EICR checks the fixed wiring of the building. Most landlords and businesses need both — we can arrange them together."),
+            ("What's the difference between PAT testing and an EICR?", "PAT testing checks appliances that plug in; an EICR checks the fixed wiring of the building — the consumer unit, circuits and sockets. They are separate checks: we focus on PAT testing, while an EICR is carried out by a qualified electrician."),
         ],
     })
 
@@ -729,7 +688,7 @@ def build_pages(g):
       <strong>Area covered:</strong> {AREA}<br>
       <strong>Hours:</strong> {SITE['hours_human']}</p>
       <h2>What to tell us</h2>
-      <p>To give you an accurate fixed price first time, it helps to know: the type of property or premises (rental, holiday let, shop, office, hall and so on), roughly how many electrical appliances there are, where it is, and whether you also need an EICR or fire safety check. Don't worry if you're not sure of the appliance count — a rough idea is plenty, and we'll never charge more than the price we quote you.</p>
+      <p>To give you an accurate fixed price first time, it helps to know: the type of property or premises (rental, holiday let, shop, office, hall and so on), roughly how many electrical appliances there are, and where it is. Don't worry if you're not sure of the appliance count — a rough idea is plenty, and we'll never charge more than the price we quote you.</p>
       <p>We aim to reply to every enquiry the same day. For anything urgent, calling is always fastest.</p>
     </div>
     <aside class="side">
@@ -750,7 +709,7 @@ def build_pages(g):
             </select>
           </label>
           <label>Area / town<input type="text" name="area" placeholder="e.g. Plymouth, Saltash, Salcombe"></label>
-          <label>How can we help?<textarea name="message" rows="4" placeholder="Roughly how many appliances? Do you also need an EICR or fire safety check?"></textarea></label>
+          <label>How can we help?<textarea name="message" rows="4" placeholder="Roughly how many appliances need testing?"></textarea></label>
           <button class="btn btn-primary btn-block" type="submit">Send my enquiry</button>
           <p class="form-note">By sending this you agree we can contact you about your enquiry. We never share your details. See our <a href="/privacy-policy">privacy policy</a>.</p>
         </form>
@@ -819,7 +778,7 @@ def build_pages(g):
 {page_banner('Terms &amp; Conditions', 'The terms on which Ocean City PAT Testing provides its services.')}
 {crumbs([('Home', '/'), ('Terms', '/terms')])}
 <section><div class="wrap prose narrow">
-  <p>These terms apply to PAT testing, EICR, fire safety and related services provided by Ocean City PAT Testing. By booking our services you agree to them. Last updated {SITE['year']}.</p>
+  <p>These terms apply to PAT testing and related services provided by Ocean City PAT Testing. By booking our services you agree to them. Last updated {SITE['year']}.</p>
   <h2>Our service</h2>
   <p>We carry out inspection and testing of electrical equipment to the IET Code of Practice, using calibrated equipment and a qualified engineer. Testing establishes whether equipment is safe to use at the time of testing; it cannot guarantee that equipment will not develop a fault afterwards. You remain responsible for using equipment correctly and reporting any subsequent damage or fault.</p>
   <h2>Quotes and prices</h2>
@@ -839,7 +798,7 @@ def build_pages(g):
     pages.append({
         "url": "/terms", "active": "", "priority": 0.3, "no_cta": True,
         "title": "Terms & Conditions | Ocean City PAT Testing",
-        "desc": "The terms and conditions on which Ocean City PAT Testing provides PAT testing, EICR and fire safety services across Plymouth, Devon and South East Cornwall.",
+        "desc": "The terms and conditions on which Ocean City PAT Testing provides PAT testing services across Plymouth, Devon and South East Cornwall.",
         "breadcrumbs": [("Home", "/"), ("Terms", "/terms")],
         "body": terms_body,
     })

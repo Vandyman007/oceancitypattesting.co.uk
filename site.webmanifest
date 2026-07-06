@@ -1,7 +1,7 @@
 {
   "name": "Ocean City PAT Testing",
   "short_name": "Ocean City PAT",
-  "description": "Portable appliance testing, EICR and fire safety testing across Plymouth, Devon and South East Cornwall.",
+  "description": "Portable appliance testing (PAT) across Plymouth, Devon and South East Cornwall.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

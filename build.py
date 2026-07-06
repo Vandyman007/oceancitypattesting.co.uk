@@ -63,12 +63,6 @@ SERVICES = [
     ("charity-community-pat-testing", "Charity &amp; Community PAT Testing",
      "Discounted per-item testing for charities, churches, clubs and community groups.",
      "heart", "charity PAT testing Devon"),
-    ("eicr-electrical-testing", "EICR &amp; Electrical Testing",
-     "Electrical Installation Condition Reports and fixed-wire testing by a qualified electrician.",
-     "report", "EICR Plymouth"),
-    ("fire-safety-testing", "Fire Safety Testing",
-     "Fire extinguisher, alarm and emergency lighting checks to complete your safety paperwork.",
-     "fire", "fire safety testing Plymouth"),
 ]
 SERVICE_SLUGS = {s[0] for s in SERVICES}
 
@@ -192,7 +186,7 @@ def org_schema():
         '"@id":"%s/#organization","name":"%s","alternateName":"Ocean City PAT Testing Plymouth",'
         '"url":"%s/","telephone":"%s","email":"%s","image":"%s/images/logo.png",'
         '"logo":{"@type":"ImageObject","url":"%s/images/logo.png","width":727,"height":731},'
-        '"description":"Portable appliance testing (PAT), EICR electrical reports and fire safety testing across Plymouth, Devon and South East Cornwall. Landlord, holiday let, business and charity PAT testing with same-day certificates.",'
+        '"description":"Portable appliance testing (PAT) across Plymouth, Devon and South East Cornwall. Landlord, holiday let, business and charity PAT testing with same-day certificates.",'
         '"priceRange":"££","currenciesAccepted":"GBP","paymentAccepted":"Cash, Card, Bank Transfer",'
         '"foundingDate":"%s","slogan":"Guiding You Safely",'
         '"address":{"@type":"PostalAddress","addressLocality":"Plymouth","addressRegion":"Devon","postalCode":"PL1","addressCountry":"GB"},'
@@ -300,7 +294,7 @@ def footer_html():
   <div class="footer-grid">
     <div>
       <div class="footer-brand"><img class="mark" src="/images/logo.png" width="44" height="44" alt="Ocean City PAT Testing lighthouse logo"> Ocean City PAT Testing</div>
-      <p>City &amp; Guilds qualified portable appliance testing, EICR electrical reports and fire safety testing across Plymouth, Devon and South East Cornwall. Same-day certificates, every time.</p>
+      <p>City &amp; Guilds qualified portable appliance testing across Plymouth, Devon and South East Cornwall. Same-day certificates, every time.</p>
       <p style="margin-bottom:.4rem"><a href="tel:{SITE['phone_e164']}">{SITE['phone_display']}</a></p>
       <p><a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
       <div class="footer-map">
@@ -640,7 +634,7 @@ def write_manifest(root):
     manifest = {
         "name": SITE["full_name"],
         "short_name": "Ocean City PAT",
-        "description": ("Portable appliance testing, EICR and fire safety testing "
+        "description": ("Portable appliance testing (PAT) "
                         "across Plymouth, Devon and South East Cornwall."),
         "start_url": "/",
         "scope": "/",
@@ -677,7 +671,7 @@ def write_redirects(root):
 
 def write_llms(root, pages):
     lines = [f"# {SITE['full_name']}", "",
-             f"> City &amp; Guilds qualified PAT testing, EICR electrical reports and fire safety testing "
+             f"> City &amp; Guilds qualified PAT testing "
              f"across Plymouth, Devon and South East Cornwall. Landlord, holiday let, business and charity "
              f"testing with same-day certificates. Phone {SITE['phone_display']}.", "",
              "## Pages", ""]

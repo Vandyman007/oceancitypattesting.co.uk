@@ -38,7 +38,7 @@ FURNITURE_H2 = {
     "frequently asked questions",
     "ready to get safe and compliant?",
     "what customers across the south west say",
-    "other electrical safety services",
+    "other pat testing services",
 }
 # hub / listing / legal / form pages: exempt from FAQ + hard word-count + >=3 img
 UTILITY_PAGES = {"contact.html", "privacy-policy.html", "terms.html",
