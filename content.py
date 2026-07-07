@@ -50,13 +50,13 @@ def build_pages(g):
   <div class="hero-grid">
     <div>
       <h1>PAT Testing in Plymouth, Devon &amp; South East Cornwall</h1>
-      <p class="lead">Ocean City PAT Testing keeps you safe and compliant. We're a City &amp; Guilds qualified, Devon Trading Standards approved testing service providing portable appliance testing for landlords, holiday lets, businesses and community groups — with your certificate the same day.</p>
+      <p class="lead">Ocean City PAT Testing keeps you safe and compliant. We're a DevonTraders-verified testing service providing portable appliance testing for landlords, holiday lets, businesses and community groups — with your certificate the same day.</p>
       <div class="hero-cta">
         <a class="btn btn-accent btn-lg" href="/contact">Get a free quote</a>
         <a class="btn btn-ghost btn-lg" href="tel:{TEL}">{ICONS['phone']}Call {PH}</a>
       </div>
       <div class="hero-trust">
-        <span>{ICONS['check']}City &amp; Guilds qualified</span>
+        <span>{ICONS['check']}DevonTraders verified</span>
         <span>{ICONS['check']}Same-day certificates</span>
         <span>{ICONS['check']}{YRS}+ years' experience</span>
         <span>{ICONS['check']}Fully insured</span>
@@ -66,7 +66,7 @@ def build_pages(g):
     <div class="hero-card">
       <span class="tag">Fixed prices · free quote</span>
       <h2 style="margin-top:.6rem">From <span class="price">£{PRICE_FROM}</span></h2>
-      <p style="color:var(--muted);margin:.2rem 0 0">Landlords from £{PRICE_FROM} per property, holiday lets from £65, businesses from £80 and just 90p per item for charities. Minimum call-out £{MIN_CALLOUT}.</p>
+      <p style="color:var(--muted);margin:.2rem 0 0">Landlords from £{PRICE_FROM} per property, holiday lets from £80, businesses from £80 and just 90p per item for charities. Minimum call-out £{MIN_CALLOUT}.</p>
       <ul>
         <li>Visual inspection &amp; full electrical test</li>
         <li>Pass/fail label on every appliance</li>
@@ -113,8 +113,8 @@ def build_pages(g):
       <h2>Proper testing by a qualified engineer — not a sticker service</h2>
       <p>Some "PAT testers" do little more than glance at a plug and slap a label on it. We don't work that way. Every appliance gets a genuine visual inspection followed by a full electrical test — earth continuity, insulation resistance and polarity — using calibrated equipment, exactly as the IET Code of Practice sets out. That's the difference between a certificate that protects you and a sticker that doesn't.</p>
       <ul class="checklist">
-        <li><strong>City &amp; Guilds qualified</strong> — testing carried out to the current IET Code of Practice.</li>
-        <li><strong>Devon Trading Standards approved</strong> — a vetted local trader you can trust in your home.</li>
+        <li><strong>Tested to IET Code of Practice</strong> — every appliance inspected and tested to the current standard.</li>
+        <li><strong>DevonTraders verified</strong> — a vetted local trader you can trust in your home.</li>
         <li><strong>Same-day certificates</strong> — digital paperwork that stands up to scrutiny.</li>
         <li><strong>Honest, fixed pricing</strong> — quoted before we start, with no hidden extras.</li>
       </ul>
@@ -149,13 +149,13 @@ def build_pages(g):
     pages.append({
         "url": "/", "active": "home", "priority": 1.0,
         "title": "PAT Testing Plymouth | Landlord & Business | Ocean City",
-        "desc": "City & Guilds qualified PAT testing in Plymouth, Devon & SE Cornwall — landlord, holiday let & business appliance testing, same-day certificate.",
+        "desc": "Professional PAT testing in Plymouth, Devon & SE Cornwall — landlord, holiday let & business appliance testing, same-day certificate.",
         "og_alt": "Ocean City PAT Testing — Guiding You Safely",
         "breadcrumbs": [("Home", "/")],
         "body": home_hero,
         "faqs": [
             ("How much does PAT testing cost?",
-             f"For landlords it starts at £{PRICE_FROM} per rental property, holiday lets from £65, businesses from £80 for the first 50 appliances and just 90p per item for charities and community groups. A minimum call-out of £{MIN_CALLOUT} applies. Every job includes a same-day certificate."),
+             f"For landlords it starts at £{PRICE_FROM} per rental property, holiday lets from £80, businesses from £80 for the first 50 appliances and just 90p per item for charities and community groups. A minimum call-out of £{MIN_CALLOUT} applies. Every job includes a same-day certificate."),
             ("How quickly can you test and certify?",
              "Most appointments are offered within a day or two, and your full digital certificate is emailed to you the same day we test — there's no waiting around for paperwork."),
             ("Is PAT testing a legal requirement?",
@@ -172,7 +172,7 @@ def build_pages(g):
 {page_banner('PAT Testing Services', 'Portable appliance testing for landlords, holiday lets, businesses and community groups across Plymouth, Devon and South East Cornwall — all carried out by one qualified, fully insured local engineer.')}
 {crumbs([('Home', '/'), ('Services', '/services')])}
 <section><div class="wrap prose">
-  <p>Ocean City PAT Testing offers a complete electrical safety service for homes, rental properties and businesses across {AREA}. Whether you're a landlord meeting your duty of care, a holiday-let owner protecting your guests, a business keeping its workplace compliant or a community group looking after volunteers, we have a service — and a price — to suit. Everything below is delivered by a City &amp; Guilds qualified engineer with over {YRS} years' hands-on electrical experience, and every job ends with a same-day certificate.</p>
+  <p>Ocean City PAT Testing offers a complete electrical safety service for homes, rental properties and businesses across {AREA}. Whether you're a landlord meeting your duty of care, a holiday-let owner protecting your guests, a business keeping its workplace compliant or a community group looking after volunteers, we have a service — and a price — to suit. Everything below is delivered by a local engineer with over {YRS} years' hands-on electrical experience, and every job ends with a same-day certificate.</p>
 </div></section>
 <section class="tight"><div class="wrap">
   {service_cards()}
@@ -197,7 +197,7 @@ def build_pages(g):
         "pat-testing": {
             "h1": "PAT Testing Services in Plymouth",
             "sub": "Portable appliance testing for homes and businesses — visual inspection plus a full electrical test, certified the same day.",
-            "lead": f"PAT testing — short for portable appliance testing — is the inspection and testing of electrical appliances to make sure they're safe to use. Ocean City PAT Testing provides thorough, no-shortcuts PAT testing across Plymouth, Devon and South East Cornwall, carried out by a City &amp; Guilds qualified engineer and backed by a same-day certificate.",
+            "lead": f"PAT testing — short for portable appliance testing — is the inspection and testing of electrical appliances to make sure they're safe to use. Ocean City PAT Testing provides thorough, no-shortcuts PAT testing across Plymouth, Devon and South East Cornwall, carried out by an experienced engineer and backed by a same-day certificate.",
             "subject": "PAT testing", "kw": "PAT testing Plymouth",
             "sections": [
                 ("What portable appliance testing actually involves",
@@ -289,7 +289,7 @@ def build_pages(g):
                 ("Who we help",
                  "<p>We test for all sorts of community organisations across the South West: parish churches and chapels, village and church halls, scout and guide groups, sports and social clubs, pre-schools and toddler groups, food banks and community kitchens, charity shops and not-for-profit projects. Whether you've a handful of appliances in a small hall or a building full of donated equipment, we'll work through it carefully, label everything clearly and leave you with a certificate for your records and your insurer. We're happy to schedule around your activities so testing never gets in the way of what you do.</p>"),
                 ("The same thorough test, just cheaper",
-                 "<p>A lower price never means a lower standard. Community groups get exactly the same service as our commercial customers — a full visual inspection and electrical test of every item, by the same City &amp; Guilds qualified engineer, with the same honest advice if something needs replacing. Many faults we find in community settings are simple to fix, and we'll sort minor ones on the spot. If you run a hall that's hired out to others, a current PAT certificate is also a reassurance you can offer every group that uses your space. We're also happy to work with trustees and volunteer committees who look after the paperwork, keeping your test dates on file and giving you a gentle reminder when the next round is due — so electrical safety stays one less thing for a busy, unpaid committee to chase up each year.</p>"),
+                 "<p>A lower price never means a lower standard. Community groups get exactly the same service as our commercial customers — a full visual inspection and electrical test of every item, by the same experienced engineer, with the same honest advice if something needs replacing. Many faults we find in community settings are simple to fix, and we'll sort minor ones on the spot. If you run a hall that's hired out to others, a current PAT certificate is also a reassurance you can offer every group that uses your space. We're also happy to work with trustees and volunteer committees who look after the paperwork, keeping your test dates on file and giving you a gentle reminder when the next round is due — so electrical safety stays one less thing for a busy, unpaid committee to chase up each year.</p>"),
             ],
             "faqs": [
                 ("How much is charity PAT testing?", "Just 90p per appliance tested — our lowest rate, available to registered charities, churches, clubs and community groups. A minimum call-out of £%d applies." % MIN_CALLOUT),
@@ -311,8 +311,8 @@ def build_pages(g):
             "Landlord PAT testing Plymouth from £35 for rental property electrical safety checks",
             "Affordable landlord PAT testing in Plymouth from £35, helping landlords meet their duty of care."),
         "holiday-let-pat-testing": ("holiday-let-pat-testing-advert.webp",
-            "Holiday let PAT testing Devon — Airbnb and self-catering appliance safety from £65",
-            "Holiday let PAT testing across Devon from £65, keeping Airbnb and self-catering guests safe."),
+            "Holiday let PAT testing Devon — Airbnb and self-catering appliance safety from £80",
+            "Holiday let PAT testing across Devon from £80, keeping Airbnb and self-catering guests safe."),
         "business-pat-testing": ("business-pat-testing-advert.webp",
             "Business PAT testing Plymouth from £80 for commercial premises and employer duty of care",
             "Business PAT testing in Plymouth from £80, helping employers meet their electrical safety duty."),
@@ -345,7 +345,7 @@ def build_pages(g):
         <a class="btn btn-primary btn-block" href="/contact">Get a free quote</a>
         <a class="btn btn-outline btn-block" href="tel:{TEL}" style="margin-top:.5rem">{ICONS['phone']}Call {PH}</a>
         <ul class="side-list">
-          <li>{ICONS['check']}City &amp; Guilds qualified</li>
+          <li>{ICONS['check']}DevonTraders verified</li>
           <li>{ICONS['check']}Same-day certificate</li>
           <li>{ICONS['check']}Fully insured</li>
           <li>{ICONS['check']}{YRS}+ years' experience</li>
@@ -394,7 +394,7 @@ def build_pages(g):
       <a class="btn btn-primary btn-block" href="/contact">Get a quote</a>
     </div>"""
     pricing_body = f"""
-{page_banner('PAT Testing Prices', f'Honest, fixed pricing with no hidden extras. Landlords from £{PRICE_FROM}, holiday lets from £65, businesses from £80 and just 90p per item for charities — every job includes a same-day certificate.')}
+{page_banner('PAT Testing Prices', f'Honest, fixed pricing with no hidden extras. Landlords from £{PRICE_FROM}, holiday lets from £80, businesses from £80 and just 90p per item for charities — every job includes a same-day certificate.')}
 {crumbs([('Home', '/'), ('Pricing', '/pricing')])}
 <section><div class="wrap prose">
   <p class="lead-p">PAT testing prices shouldn't be a mystery. At Ocean City PAT Testing we quote a fixed price up front based on your property and the number of appliances, so you know exactly what you'll pay before we start. Every price below includes the visual inspection, the full electrical test, clear pass/fail labelling and a same-day digital certificate. A minimum call-out of £{MIN_CALLOUT} applies to every visit.</p>
@@ -422,7 +422,7 @@ def build_pages(g):
     pages.append({
         "url": "/pricing", "active": "pricing", "priority": 0.9,
         "title": "PAT Testing Prices Plymouth | From £35 | Ocean City",
-        "desc": f"Fixed PAT testing prices: landlords from £{PRICE_FROM} per property, holiday lets from £65, businesses from £80, charities 90p per item. Same-day certificate. Free quote.",
+        "desc": f"Fixed PAT testing prices: landlords from £{PRICE_FROM} per property, holiday lets from £80, businesses from £80, charities 90p per item. Same-day certificate. Free quote.",
         "breadcrumbs": [("Home", "/"), ("Pricing", "/pricing")],
         "body": pricing_body,
         "faqs": [
@@ -503,7 +503,7 @@ def build_pages(g):
 <section><div class="wrap">
   <div class="split">
     <div class="prose">
-      <p class="lead-p">Looking for reliable PAT testing in {nm}? Ocean City PAT Testing provides City &amp; Guilds qualified portable appliance testing across {nm} and {county}, covering {districts}. {hook} Whether you're a landlord, a holiday-let owner, a business or a community group, you'll get a thorough test of every appliance and a same-day certificate.</p>
+      <p class="lead-p">Looking for reliable PAT testing in {nm}? Ocean City PAT Testing provides professional portable appliance testing across {nm} and {county}, covering {districts}. {hook} Whether you're a landlord, a holiday-let owner, a business or a community group, you'll get a thorough test of every appliance and a same-day certificate.</p>
       {area_fig}
       <h2>Local PAT testing you can count on in {nm}</h2>
       <p>Because we're a Plymouth-based service covering the whole region, {nm} is well within our standard area — and travel is included, so testing here costs no more than it does in the city. We arrive when we say we will, test efficiently around your tenants, guests or staff, and leave you with paperwork that satisfies your insurer, letting agent or an inspector. Every item gets a full visual inspection and electrical test, a clear pass or fail label, and a place on your digital certificate.</p>
@@ -547,11 +547,11 @@ def build_pages(g):
         pages.append({
             "url": f"/areas-covered/{slug}", "active": "areas", "priority": 0.7,
             "title": mk_title(f"PAT Testing {nm}"),
-            "desc": f"PAT testing in {nm}, {county} by a City & Guilds engineer — landlord, holiday let & business testing with a same-day certificate from £{PRICE_FROM}.",
+            "desc": f"PAT testing in {nm}, {county} by an experienced local engineer — landlord, holiday let & business testing with a same-day certificate from £{PRICE_FROM}.",
             "breadcrumbs": [("Home", "/"), ("Areas Covered", "/areas-covered"), (nm_plain, f'/areas-covered/{slug}')],
             "body": body,
             "faqs": [
-                (f"How much is PAT testing in {nm}?", f"Landlords start at £{PRICE_FROM} per property, holiday lets from £65, businesses from £80 and charities 90p per item. Travel to {nm} is included, so you pay the same as customers in Plymouth."),
+                (f"How much is PAT testing in {nm}?", f"Landlords start at £{PRICE_FROM} per property, holiday lets from £80, businesses from £80 and charities 90p per item. Travel to {nm} is included, so you pay the same as customers in Plymouth."),
                 (f"Do you really cover {nm}?", f"Yes — {nm} in {county} is part of our standard coverage area from our Plymouth base. Call {PH} to book."),
                 ("How soon can you come out?", f"Most {nm} appointments are offered within a day or two, and your certificate is emailed the same day we test."),
                 ("Can you test several properties here?", f"Yes. If you have multiple properties in or around {nm} we'll plan an efficient testing round and keep your renewal dates on file."),
@@ -567,16 +567,16 @@ def build_pages(g):
 <section><div class="wrap prose">
   <p class="lead-p">Ocean City PAT Testing is a Plymouth-based electrical safety service built on one simple idea: testing should be done properly, explained honestly and priced fairly. Our name nods to Plymouth — the Ocean City — and our lighthouse logo reflects what we're here to do: guide you safely through the business of keeping electrical equipment safe, so you can get on with everything else.</p>
   <h2>Qualified, experienced and local</h2>
-  <p>Our testing is carried out by a City &amp; Guilds qualified engineer with over {YRS} years of hands-on electrical experience. That background matters: it means we don't just run a tester over an appliance and print a label — we understand what we're looking at, spot the faults that a quick glance would miss, and can often put minor problems right on the spot. We're approved by Devon Trading Standards too, which means we've been vetted as a trader you can welcome into your home or business with confidence.</p>
+  <p>Our testing is carried out by a local engineer with over {YRS} years of hands-on electrical experience. That background matters: it means we don't just run a tester over an appliance and print a label — we understand what we're looking at, spot the faults that a quick glance would miss, and can often put minor problems right on the spot. We're DevonTraders verified too, which means we've been independently vetted as a trader you can welcome into your home or business with confidence.</p>
   <h2>What we believe in</h2>
   <p>We've all heard the horror stories — the "PAT tester" who tested forty appliances in twenty minutes, or the certificate that turned out to be worthless when it mattered. We started Ocean City PAT Testing to be the opposite of that. Every item gets a genuine visual inspection and a full electrical test. Every customer gets the truth about what we find, whether that's good news or a heater that needs to go in the bin. And every job ends with a clear, same-day certificate that will stand up to scrutiny from an insurer or a Health &amp; Safety inspector. No shortcuts, no scare tactics, no hidden costs.</p>
   <h2>Who we work with</h2>
   <p>We test for landlords and letting agents keeping rental properties compliant, holiday-let and Airbnb owners protecting their guests, businesses of every kind from cafés to workshops, and charities and community groups on our discounted rate. From a single rental flat in Plymouth to a portfolio spread across Devon and Cornwall, the service is the same — reliable, thorough and refreshingly straightforward. A lot of our work comes from referrals and repeat customers, which is exactly how we like it.</p>
   <h2>The standards and qualifications we hold</h2>
-  <p>Credentials matter when someone is judging whether your electrical equipment is safe, so it's worth being clear about ours. Our testing is carried out by a City &amp; Guilds qualified engineer and follows the IET Code of Practice for In-service Inspection and Testing of Electrical Equipment — the document the whole industry works to. We're approved by Devon Trading Standards, which means we've been independently vetted as a trustworthy local trader, and we carry full public liability insurance for every job. Our test equipment is calibrated, so the readings on your certificate are accurate and defensible. Put together, that's the difference between a certificate that genuinely protects you and a sticker that simply looks the part — and it's why letting agents, insurers and inspectors across the South West are happy to accept our paperwork.</p>
+  <p>Credentials matter when someone is judging whether your electrical equipment is safe, so it's worth being clear about ours. Our testing is carried out by an experienced engineer and follows the IET Code of Practice for In-service Inspection and Testing of Electrical Equipment — the document the whole industry works to. We're DevonTraders verified, which means we've been independently vetted as a trustworthy local trader, and we carry full public liability insurance for every job. Our test equipment is calibrated, so the readings on your certificate are accurate and defensible. Put together, that's the difference between a certificate that genuinely protects you and a sticker that simply looks the part — and it's why letting agents, insurers and inspectors across the South West are happy to accept our paperwork.</p>
   <div class="cred-figs">
-    <figure><img src="/images/pat-qualification-certificate.webp" alt="City &amp; Guilds PAT testing qualification certificate held by Ocean City PAT Testing" loading="lazy" decoding="async"><figcaption>City &amp; Guilds PAT testing qualification.</figcaption></figure>
-    <figure><img src="/images/devon-trading-standards-approved.webp" alt="Devon Trading Standards approved trader badge for Ocean City PAT Testing" loading="lazy" decoding="async"><figcaption>Devon Trading Standards approved trader.</figcaption></figure>
+    <figure><img src="/images/pat-visual-inspection-label.webp" alt="Ocean City PAT Testing carrying out a full visual inspection of an appliance" loading="lazy" decoding="async"><figcaption>Every appliance gets a full visual inspection and electrical test.</figcaption></figure>
+    <figure><img src="/images/electrical-compliance-stamp.webp" alt="Electrical compliance — PAT testing to the IET Code of Practice by Ocean City PAT Testing" loading="lazy" decoding="async"><figcaption>Tested to the IET Code of Practice, fully insured and DevonTraders verified.</figcaption></figure>
   </div>
   <h2>Our testing process, step by step</h2>
   <p>People are sometimes surprised by how methodical a proper test is. We start by agreeing access and a time that suits your tenants, guests or staff. On site, we work room by room so nothing gets missed, unplugging each appliance, inspecting the plug, fuse, lead and casing, and then running the electrical tests with calibrated equipment. Every item that passes is labelled there and then, and anything that fails is set aside with a clear explanation of why. Before we leave, we re-plug everything exactly as we found it, run through our findings with you and confirm when your certificate will arrive — usually within hours. It's careful, unhurried work, because that's the only way to do it properly.</p>
@@ -591,11 +591,11 @@ def build_pages(g):
     pages.append({
         "url": "/about", "active": "about", "priority": 0.7,
         "title": "About Us | Ocean City PAT Testing Plymouth",
-        "desc": "City & Guilds qualified, Devon Trading Standards approved PAT testing in Plymouth — 20+ years' electrical experience, guiding you safely.",
+        "desc": "DevonTraders-verified PAT testing in Plymouth — 20+ years' hands-on electrical experience, guiding you safely.",
         "breadcrumbs": [("Home", "/"), ("About", "/about")],
         "body": about_body,
         "faqs": [
-            ("Are you qualified to carry out PAT testing?", "Yes — our testing is done by a City & Guilds qualified engineer with over 20 years' electrical experience, and we're approved by Devon Trading Standards."),
+            ("Are you qualified to carry out PAT testing?", "Yes — our testing is done by an experienced engineer with over 20 years' hands-on electrical experience, carried out to the IET Code of Practice, and we're DevonTraders verified."),
             ("Are you insured?", "Yes, we carry full public liability insurance, and every job is carried out to the IET Code of Practice."),
             ("What areas do you cover?", f"Plymouth, the South Hams and South East Cornwall, including {', '.join(a[1] for a in AREAS[:6])} and more."),
             ("Do I deal with the same person throughout?", "You do. When you book Ocean City PAT Testing you deal directly with the engineer who carries out the work from start to finish — no call centres, no subcontractors, and someone you can always get hold of afterwards if you have a question about your certificate."),
@@ -614,7 +614,7 @@ def build_pages(g):
   <p>PAT testing — portable appliance testing — is the examination of electrical appliances and equipment to make sure they're safe to use. It has two parts: a visual inspection of the plug, cable, fuse and casing, and an electrical test using calibrated equipment to check earth continuity, insulation resistance and polarity. A 'portable appliance' is really anything that connects to the mains by a plug and lead — from a kettle or computer to a large floor-standing machine in a workshop. The visual inspection is a vital part of the process; a great many faults are caught just by looking carefully, which is why we never skip it.</p>
   {mf("uk-plug-wiring-fuse.webp", "UK 13A plug wiring and 13A fuse, checked during a PAT testing visual inspection", "Inside a UK 13A plug: correct wiring and the right fuse are exactly what a PAT test's visual inspection checks for.")}
   <h2>Who needs to carry out testing?</h2>
-  <p>Inspection and testing should be carried out by a competent person — someone with the knowledge, experience and proper equipment to do it safely and interpret the results. For low-risk environments that can sometimes be a trained member of staff, but for a certificate that genuinely protects you, it's worth using a qualified, experienced engineer. That's what you get with Ocean City PAT Testing: a City &amp; Guilds qualified tester who tests to the IET Code of Practice and gives you paperwork that stands up.</p>
+  <p>Inspection and testing should be carried out by a competent person — someone with the knowledge, experience and proper equipment to do it safely and interpret the results. For low-risk environments that can sometimes be a trained member of staff, but for a certificate that genuinely protects you, it's worth using a qualified, experienced engineer. That's what you get with Ocean City PAT Testing: an experienced tester who tests to the IET Code of Practice and gives you paperwork that stands up.</p>
   <h2>Why is PAT testing needed?</h2>
   <p>The headline reason is safety — faulty electrical equipment causes fires, shocks and injuries every year, and most of it is preventable. The legal reason is duty of care: the Electricity at Work Regulations 1989 require electrical equipment to be maintained to prevent danger, and the Health and Safety at Work Act places broad duties on employers and those in control of premises. The practical reason is insurance: if an appliance causes damage or injury, your insurer will want evidence the equipment was maintained, and a current PAT certificate provides it. Without that proof, a claim can be challenged or refused — and you could be held liable.</p>
   <h2>How often do appliances need testing?</h2>
@@ -656,7 +656,7 @@ def build_pages(g):
 <section><div class="wrap prose">
   <p class="lead-p">We're proud of the company we keep. Over the years Ocean City PAT Testing has become a trusted name for electrical safety across Plymouth, Devon and South East Cornwall, working with letting agents, holiday-let owners, hospitality businesses, marine firms, dental and veterinary practices, care providers and community organisations throughout the region.</p>
   <h2>The standards we test to</h2>
-  <p>All of our testing follows the IET Code of Practice for In-service Inspection and Testing of Electrical Equipment — the recognised industry standard. We're City &amp; Guilds qualified and approved by Devon Trading Standards, and we carry full public liability insurance. Our equipment is calibrated so that every reading we record is accurate and defensible. When you hand our certificate to an insurer, a letting agent or a Health &amp; Safety inspector, it carries the weight of being done properly.</p>
+  <p>All of our testing follows the IET Code of Practice for In-service Inspection and Testing of Electrical Equipment — the recognised industry standard. We're DevonTraders verified and carry full public liability insurance. Our equipment is calibrated so that every reading we record is accurate and defensible. When you hand our certificate to an insurer, a letting agent or a Health &amp; Safety inspector, it carries the weight of being done properly.</p>
   <h2>Who we work with</h2>
   <p>We're trusted by a broad mix of organisations across the South West — including local letting and property management agents, holiday-let and serviced-accommodation owners, hospitality venues, marine and superyacht businesses around the Plymouth waterfront, dental and veterinary practices, care and support providers, and a number of charities and community groups. Many came to us through word of mouth, and many have stayed with us for years. We're always glad to be a reliable fixture in the local business community.</p>
   <h2>Working together</h2>
@@ -667,7 +667,7 @@ def build_pages(g):
     pages.append({
         "url": "/news-and-associates", "active": "", "priority": 0.5,
         "title": "News & Associates | Ocean City PAT Testing Plymouth",
-        "desc": "Who we work with and the standards we test to — City & Guilds qualified, Devon Trading Standards approved and trusted across the South West.",
+        "desc": "Who we work with and the standards we test to — DevonTraders verified and trusted across the South West.",
         "breadcrumbs": [("Home", "/"), ("News & Associates", "/news-and-associates")],
         "body": news_body,
     })

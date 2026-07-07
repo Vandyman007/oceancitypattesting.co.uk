@@ -95,14 +95,14 @@ NEARBY = ["Ivybridge", "Modbury", "Yealmpton", "Cawsand", "Polperro", "West Looe
 # ---------------------------------------------------------------------------
 PRICE_TIERS = [
     {"id": "landlord", "name": "Landlord & Rental Property", "icon": "house",
-     "from": 40, "unit": "per property",
+     "from": 35, "unit": "per property",
      "blurb": "A complete portable appliance test for a rented house or flat, with your certificate the same day — exactly what you need to evidence your duty of care to tenants.",
      "includes": ["Visual inspection &amp; full electrical test of all portable appliances",
                   "Pass/fail labelling on every item tested",
                   "Same-day PDF certificate emailed to you",
                   "Advice on any item that fails or needs attention"]},
     {"id": "holiday-let", "name": "Holiday Let & Accommodation", "icon": "key",
-     "from": 65, "unit": "from",
+     "from": 80, "unit": "from",
      "blurb": "Self-catering cottages, Airbnbs and serviced apartments carry more appliances and higher guest turnover. We test the lot and keep your booking platform and insurer satisfied.",
      "includes": ["All guest-use appliances tested — kettles, toasters, hairdryers, TVs, heaters",
                   "Kitchen white goods and any supplied electricals",
@@ -124,8 +124,8 @@ PRICE_TIERS = [
                   "Friendly, flexible visits that fit around your activities"]},
 ]
 # Minimum call-out applies to every visit.
-MIN_CALLOUT = 40
-PRICE_FROM = 40   # used for "from £X" marketing copy (landlord entry price = min call-out)
+MIN_CALLOUT = 35
+PRICE_FROM = 35   # used for "from £X" marketing copy (landlord entry price = min call-out)
 
 # ---------------------------------------------------------------------------
 # SVG ICON LIBRARY (inline, no external requests)
@@ -243,7 +243,7 @@ def header_html(active):
     return f"""
 <div class="brand-bar" aria-hidden="true"></div>
 <div class="topbar"><div class="wrap">
-  <div>{ICONS['shield']} City &amp; Guilds qualified · Devon Trading Standards approved · {SITE['experience_years']}+ years' experience</div>
+  <div>{ICONS['shield']} Fully insured · DevonTraders verified · {SITE['experience_years']}+ years' experience</div>
   <div class="tb-right">
     <a href="tel:{SITE['phone_e164']}">{ICONS['phone']}{SITE['phone_display']}</a>
     <a href="mailto:{SITE['email']}">{ICONS['mail']}{SITE['email']}</a>
@@ -294,7 +294,7 @@ def footer_html():
   <div class="footer-grid">
     <div>
       <div class="footer-brand"><img class="mark" src="/images/logo.png" width="44" height="44" alt="Ocean City PAT Testing lighthouse logo"> Ocean City PAT Testing</div>
-      <p>City &amp; Guilds qualified portable appliance testing across Plymouth, Devon and South East Cornwall. Same-day certificates, every time.</p>
+      <p>Professional portable appliance testing across Plymouth, Devon and South East Cornwall. Same-day certificates, every time.</p>
       <p style="margin-bottom:.4rem"><a href="tel:{SITE['phone_e164']}">{SITE['phone_display']}</a></p>
       <p><a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
       <div class="footer-map">
@@ -317,7 +317,7 @@ def footer_html():
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; {THIS_YEAR} {SITE['full_name']}. City &amp; Guilds qualified &amp; Devon Trading Standards approved. All testing carried out to IET Code of Practice (5th Edition).</span>
+    <span>&copy; {THIS_YEAR} {SITE['full_name']}. DevonTraders verified &amp; fully insured. All testing carried out to IET Code of Practice (5th Edition).</span>
     <span>Plymouth · {SITE['hours_human']}</span>
   </div>
 </div></footer>
@@ -482,7 +482,7 @@ def author_box():
     return f"""<div class="author-box">
   <img class="av" src="/images/logo.png" width="64" height="64" alt="Ocean City PAT Testing lighthouse logo">
   <div class="meta"><strong>Ocean City PAT Testing</strong>
-  City &amp; Guilds qualified and Devon Trading Standards approved, with over {SITE['experience_years']} years' hands-on electrical experience across Plymouth, Devon and South East Cornwall. Every appliance is tested to the IET Code of Practice and certified the same day.</div>
+  DevonTraders verified, with over {SITE['experience_years']} years' hands-on electrical experience across Plymouth, Devon and South East Cornwall. Every appliance is tested to the IET Code of Practice and certified the same day.</div>
 </div>"""
 
 def trust_block(subject, kw):
@@ -490,13 +490,13 @@ def trust_block(subject, kw):
     lower-case noun phrase (e.g. 'PAT testing'); kw is the primary keyword."""
     return f"""
   <h2>Experienced, qualified {subject} you can rely on</h2>
-  <p>Ocean City PAT Testing has carried out {kw} for homeowners, landlords, holiday-let owners and businesses right across {SITE['area']}. The work is done by a City &amp; Guilds qualified engineer with over {SITE['experience_years']} years of hands-on electrical experience — not a box-ticking subcontractor — so every appliance gets a proper visual inspection and a full electrical test, not just a sticker. Because we're based here in Plymouth, we know the area, turn up when we say we will, and treat your home or premises with respect.</p>
+  <p>Ocean City PAT Testing has carried out {kw} for homeowners, landlords, holiday-let owners and businesses right across {SITE['area']}. The work is done by a local engineer with over {SITE['experience_years']} years of hands-on electrical experience — not a box-ticking subcontractor — so every appliance gets a proper visual inspection and a full electrical test, not just a sticker. Because we're based here in Plymouth, we know the area, turn up when we say we will, and treat your home or premises with respect. We're DevonTraders verified and fully insured, and every appliance is tested to the current IET Code of Practice, so the certificate you're handed genuinely stands up to scrutiny from insurers, letting agents and Health &amp; Safety inspectors alike.</p>
   <h2>Why testing matters — and what the law says</h2>
   <p>Under the Electricity at Work Regulations 1989 and the Health and Safety at Work Act, anyone responsible for a workplace, a rented home or a public space has a duty to keep electrical equipment safe. Regular {subject} is the recognised way to evidence that duty of care. Just as importantly, if a faulty appliance ever causes a fire or injury, your insurer will ask for proof the equipment was maintained — and a current PAT certificate is exactly that proof. Skipping it can invalidate a claim and leave you personally liable.</p>
   <h2>Same-day certificates and honest advice</h2>
   <p>Every job finishes with a clear pass/fail label on each item and a full digital certificate emailed to you the same day, ready for your safety file, your letting agent, your insurer or an inspector. If something fails, we tell you plainly what's wrong and what it would take to put it right — many minor faults, like a worn fuse or a damaged plug, can often be repaired on the spot. There's never any pressure and never a charge for friendly advice.</p>
   <h2>Fair, fixed prices across the South West</h2>
-  <p>Our {kw} is quoted up front with no hidden extras — landlords from £{PRICE_FROM} per property, holiday lets from £65, businesses from £80 for the first 50 appliances and just 90p per item for charities and community groups. We cover Plymouth, the South Hams and South East Cornwall as standard, and that straightforward, no-surprises approach is why customers rate us {SITE['rating']} out of 5. When safety is the whole point, you want someone who does it properly the first time.</p>
+  <p>Our {kw} is quoted up front with no hidden extras — landlords from £{PRICE_FROM} per property, holiday lets from £80, businesses from £80 for the first 50 appliances and just 90p per item for charities and community groups. We cover Plymouth, the South Hams and South East Cornwall as standard, and that straightforward, no-surprises approach is why customers rate us {SITE['rating']} out of 5. When safety is the whole point, you want someone who does it properly the first time.</p>
 """
 
 # ---------------------------------------------------------------------------
@@ -743,7 +743,7 @@ RedirectMatch 404 (?i)/(\\.git|tools)(/|$)
 
 def write_llms(root, pages):
     lines = [f"# {SITE['full_name']}", "",
-             f"> City &amp; Guilds qualified PAT testing "
+             f"> Professional PAT testing "
              f"across Plymouth, Devon and South East Cornwall. Landlord, holiday let, business and charity "
              f"testing with same-day certificates. Phone {SITE['phone_display']}.", "",
              "## Pages", ""]
